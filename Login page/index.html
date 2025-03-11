@@ -23,56 +23,12 @@
 
         .container {
             display: flex;
-            width: 80%;
-            max-width: 1200px;
-        }
-
-        .left-section {
-            flex: 1;
-            padding: 50px;
-            color: white;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
-            background: none; /* Transparent background */
-        }
-
-        .left-section h2 {
-            font-size: 45px;
-            margin-bottom: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeSlide 1s ease-out forwards;
-        }
-
-        .left-section h1 {
-            font-size: 64px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeSlide 1.5s ease-out forwards;
-            animation-delay: 0.5s;
-        }
-
-        @keyframes fadeSlide {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .right-section {
-            flex: 1;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
             background: white;
             padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
@@ -95,6 +51,7 @@
 
         .login-form {
             display: block;
+            width: 100%;
         }
 
         .form-group {
@@ -170,33 +127,24 @@
     </div>
 
     <div class="container">
-        <!-- Transparent Left Section with Animation -->
-        <div class="left-section">
-            <h2>Welcome to</h2>
-            <h1>Sanjay Ghodawat University</h1>
-        </div>
-
-        <!-- Solid Right Section -->
-        <div class="right-section">
-            <form id="login-form" class="login-form">
-                <h2 style="color: black; margin-bottom: 20px;">Login</h2>
-                <div class="form-group">
-                    <label for="user-id">User ID</label>
-                    <input type="text" id="user-id" placeholder="Enter your user ID" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" required>
-                </div>
-                <div class="options">
-                    <a href="#">Forgot password?</a>
-                </div>
-                <button type="submit" class="submit-btn">Sign In</button>
-                <div class="support">
-                    <a href="#">Need help? Contact Support</a>
-                </div>
-            </form>
-        </div>
+        <form id="login-form" class="login-form">
+            <h2 style="color: black; margin-bottom: 20px;">Login</h2>
+            <div class="form-group">
+                <label for="user-id">User ID</label>
+                <input type="text" id="user-id" placeholder="Enter your user ID" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="options">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="submit-btn">Sign In</button>
+            <div class="support">
+                <a href="#">Need help? Contact Support</a>
+            </div>
+        </form>
     </div>
 </body>
 </html>
