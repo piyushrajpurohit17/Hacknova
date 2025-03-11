@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import TeacherPage from './Front-End/TeacherPage/TeacherPage'
-
+import LoginPage from './Front-End/LoginPage/LoginPage'
+import StudentDashBoard from './Front-End/StudentDashBoard/StudentDashBoard'
+import TeacherDashBoard from './Front-End/TeacherDashBoard/TeacherDashBoard'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-
-    <TeacherPage/>
-
+   <TeacherDashBoard/>
+    <StudentDashBoard/>
+    <LoginPage/>
     </>
   )
 }

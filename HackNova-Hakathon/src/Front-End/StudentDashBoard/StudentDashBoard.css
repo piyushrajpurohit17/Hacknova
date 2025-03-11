@@ -176,3 +176,11 @@ header {
     color: #7f8c8d;
     font-size: 0.9rem;
 }
+
+.StudentDashBord-header{
+    box-shadow:  0 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+}
