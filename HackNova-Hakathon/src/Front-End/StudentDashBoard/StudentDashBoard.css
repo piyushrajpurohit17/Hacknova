@@ -22,6 +22,8 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .sidebar .logo h1 {
