@@ -106,24 +106,14 @@ header p {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 60px;
     background-color: #002244;
     color: #ffffff;
     font-size: 14px;
 }
 
 
-button{
-    
-    color: #002244;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+
 
 
 
