@@ -26,6 +26,14 @@ header .header {
     border-radius: 5px; 
     
 }
+.btn{
+    line-height: 10px;
+    position: absolute;
+    margin-bottom:30px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     right: 10px;    
+}
 
 header h1 {
     font-size: 40px;
@@ -111,7 +119,10 @@ footer {
     color: #ffffff;
     font-size: 14px;
 }
-
+footer i{
+    margin: 0 10px;
+    
+}
 
 
 
