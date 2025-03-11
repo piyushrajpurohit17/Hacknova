@@ -27,6 +27,7 @@ header .header {
     
 }
 .btn{
+    color: white;
     line-height: 10px;
     position: absolute;
     margin-bottom:30px;
