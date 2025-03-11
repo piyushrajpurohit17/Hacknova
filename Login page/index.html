@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Portal Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('./sgu-university.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 50px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: none; /* Transparent background */
+        }
+
+        .left-section h2 {
+            font-size: 45px;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeSlide 1s ease-out forwards;
+        }
+
+        .left-section h1 {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeSlide 1.5s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .right-section {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            height: 150px;
+            margin-right: 10px;
+        }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .login-form {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: black;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            background: #F5F8FF;
+            border: 1px solid #B3CFFF;
+            border-radius: 5px;
+            color: black;
+            font-size: 14px;
+        }
+
+        .form-group input::placeholder {
+            color: #666;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #084cfc;
+        }
+
+        .options {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            color: black;
+            font-size: 14px;
+        }
+
+        .options a {
+            color: #084cfc;
+            text-decoration: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #084cfc;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .support {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .support a {
+            color: #084cfc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="./logo1.png" alt="SGU Logo" class="logo">
+    </div>
+
+    <div class="container">
+        <!-- Transparent Left Section with Animation -->
+        <div class="left-section">
+            <h2>Welcome to</h2>
+            <h1>Sanjay Ghodawat University</h1>
+        </div>
+
+        <!-- Solid Right Section -->
+        <div class="right-section">
+            <form id="login-form" class="login-form">
+                <h2 style="color: black; margin-bottom: 20px;">Login</h2>
+                <div class="form-group">
+                    <label for="user-id">User ID</label>
+                    <input type="text" id="user-id" placeholder="Enter your user ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="options">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="submit-btn">Sign In</button>
+                <div class="support">
+                    <a href="#">Need help? Contact Support</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
