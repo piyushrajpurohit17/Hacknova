@@ -5,7 +5,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email
 import os
- 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///college.db'
@@ -48,6 +48,7 @@ class StudentDetails(db.Model):
     password = db.Column(db.String(100), nullable=False)
     username = db.Column(db.String(100), nullable=False)
     role = db.Column(db.String(20), nullable=False)  
+
 # Forms
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -102,6 +103,15 @@ def faculty_dashboard():
         return redirect(url_for('home'))
     faculty = FacultyDetails.query.filter_by(username=current_user.username).first()
     return render_template('faculty_dashboard.html', faculty=faculty)
+
+@app.route('/test-db')
+def test_db():
+    try:
+        # Query the database to check if it's working
+        students = StudentDetails.query.all()
+        return f"Database connection successful! Found {len(students)} students."
+    except Exception as e:
+        return f"Database connection failed: {str(e)}"
 
 if __name__ == '__main__':
     with app.app_context():
